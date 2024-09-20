@@ -5,6 +5,7 @@ const connection = mysql.createConnection({
     user: process.env.AZURE_MYSQL_USER,
     password: process.env.AZURE_MYSQL_PASSWORD,
     database: process.env.AZURE_MYSQL_DATABASE,
+    port:3306,
     ssl: {
         rejectUnauthorized: false
     }
