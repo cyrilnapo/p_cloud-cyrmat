@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+{{#if isAuthenticated }}
+<p>Bonjour {{username}} !</p>
+
+<a href="/impersonate">Impersonation (voir le site comme mes étudiants)</a>
+<br>
+<a href="/auth/signout">Sign out</a>
+{{else}}
+<p>Welcome to {{title}}</p>
+<a href="/auth/signin">Sign in</a>
+{{/if}}

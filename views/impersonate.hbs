@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+{{#if isAuthenticated }}
+<h2>Liste de mes étudiants :</h2>
+    <ul>
+        {{#each schedules}}
+            <li><a href="/impersonate/{{idSchedule}}">{{idSchedule}}</a></li>
+        {{/each}}
+    </ul>
+<a href="/auth/signout">Sign out</a>
+{{else}}
+<p>Welcome to {{title}}</p>
+<a href="/auth/signin">Sign in</a>
+{{/if}}

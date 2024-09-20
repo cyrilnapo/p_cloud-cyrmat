@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+{{#if isAuthenticated }}
+<p>Bonjour {{username}} !</p>
+
+<div id="schedule-data" data-json="{{schedule}}"></div> 
+<div id="scheduleDiv"></div> 
+<script src="/javascripts/createSchedule.js"></script>
+<script src="/javascripts/createAbsencesChart.js"></script>
+<div id="absencesDiv"></div>
+<br>
+<a href="/auth/signout">Sign out</a>
+{{else}}
+<p>Welcome to {{title}}</p>
+<a href="/auth/signin">Sign in</a>
+{{/if}}
